@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Strategic AI consulting by Santiago Sainz. Transform your business with expert AI implementation.">
+    <title>Consulting - Santiago Sainz AI</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.5'><circle cx='12' cy='12' r='10'/><path d='M12 6v6l4 2'/></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .consulting-hero {
+            padding-top: calc(var(--nav-height) + var(--space-16));
+            padding-bottom: var(--space-16);
+            text-align: center;
+            background-color: var(--color-surface);
+        }
+        
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-6);
+            margin-bottom: var(--space-24);
+        }
+        
+        .expertise-item {
+            padding: var(--space-6);
+            background-color: var(--color-background);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .expertise-item h4 {
+            margin-bottom: var(--space-2);
+        }
+        
+        .process-timeline {
+            position: relative;
+            padding-left: var(--space-12);
+            margin-bottom: var(--space-24);
+        }
+        
+        .process-timeline:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: var(--color-border);
+        }
+        
+        .process-step {
+            position: relative;
+            margin-bottom: var(--space-12);
+        }
+        
+        .process-step:before {
+            content: "";
+            position: absolute;
+            left: calc(-1 * var(--space-12) - 1px);
+            top: 8px;
+            width: 16px;
+            height: 16px;
+            background-color: var(--color-accent);
+            border-radius: 50%;
+        }
+        
+        .process-step h4 {
+            color: var(--color-accent);
+            margin-bottom: var(--space-2);
+        }
+        
+        .packages {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: var(--space-8);
+            margin-bottom: var(--space-24);
+        }
+        
+        .package-card {
+            padding: var(--space-8);
+            background-color: var(--color-surface);
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .package-card.featured {
+            background-color: var(--color-primary);
+            color: var(--color-background);
+            transform: scale(1.05);
+        }
+        
+        .package-card.featured p,
+        .package-card.featured .package-features li {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        .package-name {
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+        }
+        
+        .package-price {
+            font-size: var(--font-size-3xl);
+            font-weight: 700;
+            margin-bottom: var(--space-2);
+        }
+        
+        .package-duration {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-6);
+        }
+        
+        .package-features {
+            list-style: none;
+            text-align: left;
+            margin-bottom: var(--space-8);
+        }
+        
+        .package-features li {
+            padding: var(--space-2) 0;
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-2);
+        }
+        
+        .package-features li:before {
+            content: "✓";
+            color: var(--color-accent);
+            font-weight: 600;
+        }
+        
+        .package-card.featured .package-features li:before {
+            color: var(--color-background);
+        }
+        
+        .testimonial {
+            padding: var(--space-8);
+            background-color: var(--color-surface);
+            border-radius: 12px;
+            margin-bottom: var(--space-8);
+        }
+        
+        .testimonial-content {
+            font-size: var(--font-size-lg);
+            font-style: italic;
+            margin-bottom: var(--space-4);
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+        }
+        
+        .testimonial-role {
+            color: var(--color-text-muted);
+            font-size: var(--font-size-sm);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Santiago Sainz AI</a>
+            <div class="nav-menu">
+                <a href="/products.html" class="nav-link">Products</a>
+                <a href="/consulting.html" class="nav-link">Consulting</a>
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+                <a href="https://santiagosainz.gumroad.com/l/dashpro" class="nav-cta" target="_blank">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="consulting-hero">
+        <div class="container">
+            <span class="label">Consulting</span>
+            <h1>Strategic AI Implementation</h1>
+            <p class="hero-description">
+                Transform your business with expert AI guidance. From strategy to implementation, 
+                accelerate your growth with proven methodologies.
+            </p>
+        </div>
+    </section>
+
+    <!-- Expertise -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Areas of Expertise</h2>
+                <p>Comprehensive AI solutions for modern businesses</p>
+            </div>
+            
+            <div class="expertise-grid">
+                <div class="expertise-item">
+                    <h4>AI Strategy</h4>
+                    <p>Develop a roadmap for AI integration aligned with your business goals</p>
+                </div>
+                <div class="expertise-item">
+                    <h4>Process Automation</h4>
+                    <p>Identify and automate repetitive tasks to increase efficiency</p>
+                </div>
+                <div class="expertise-item">
+                    <h4>Custom AI Models</h4>
+                    <p>Build tailored AI solutions for your specific use cases</p>
+                </div>
+                <div class="expertise-item">
+                    <h4>Tool Selection</h4>
+                    <p>Choose the right AI tools and platforms for your needs</p>
+                </div>
+                <div class="expertise-item">
+                    <h4>Team Training</h4>
+                    <p>Upskill your team to leverage AI effectively</p>
+                </div>
+                <div class="expertise-item">
+                    <h4>Implementation</h4>
+                    <p>Hands-on support to deploy AI solutions successfully</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>How We Work Together</h2>
+                <p>A proven process for successful AI implementation</p>
+            </div>
+            
+            <div class="process-timeline">
+                <div class="process-step">
+                    <h4>1. Discovery</h4>
+                    <p>We analyze your current processes, challenges, and opportunities for AI integration</p>
+                </div>
+                <div class="process-step">
+                    <h4>2. Strategy</h4>
+                    <p>Develop a comprehensive AI strategy aligned with your business objectives</p>
+                </div>
+                <div class="process-step">
+                    <h4>3. Pilot</h4>
+                    <p>Start with a small, high-impact project to demonstrate value quickly</p>
+                </div>
+                <div class="process-step">
+                    <h4>4. Scale</h4>
+                    <p>Expand successful implementations across your organization</p>
+                </div>
+                <div class="process-step">
+                    <h4>5. Optimize</h4>
+                    <p>Continuously improve and adapt your AI solutions for maximum impact</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Consulting Packages</h2>
+                <p>Choose the engagement that fits your needs</p>
+            </div>
+            
+            <div class="packages">
+                <div class="package-card">
+                    <h3 class="package-name">Strategy Session</h3>
+                    <div class="package-price">$500</div>
+                    <div class="package-duration">90-minute session</div>
+                    <ul class="package-features">
+                        <li>AI readiness assessment</li>
+                        <li>Opportunity identification</li>
+                        <li>Initial roadmap</li>
+                        <li>Tool recommendations</li>
+                        <li>Follow-up resources</li>
+                    </ul>
+                    <a href="/contact.html" class="button button-secondary">Book Session</a>
+                </div>
+                
+                <div class="package-card featured">
+                    <h3 class="package-name">Implementation Sprint</h3>
+                    <div class="package-price">$2,500</div>
+                    <div class="package-duration">One-week intensive</div>
+                    <ul class="package-features">
+                        <li>Full AI audit</li>
+                        <li>Custom implementation plan</li>
+                        <li>Hands-on development</li>
+                        <li>Team training</li>
+                        <li>30-day support</li>
+                        <li>Documentation</li>
+                    </ul>
+                    <a href="/contact.html" class="button button-white">Get Started</a>
+                </div>
+                
+                <div class="package-card">
+                    <h3 class="package-name">Ongoing Advisory</h3>
+                    <div class="package-price">$1,500</div>
+                    <div class="package-duration">Monthly retainer</div>
+                    <ul class="package-features">
+                        <li>Weekly check-ins</li>
+                        <li>Continuous optimization</li>
+                        <li>Priority support</li>
+                        <li>Quarterly reviews</li>
+                        <li>Unlimited email support</li>
+                    </ul>
+                    <a href="/contact.html" class="button button-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Client Success Stories</h2>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-content">
+                    "Santiago helped us implement AI across our workflow, reducing manual tasks by 70% and allowing our team to focus on strategic work. The ROI was immediate."
+                </p>
+                <div class="testimonial-author">Sarah Chen</div>
+                <div class="testimonial-role">CEO, TechStart Inc.</div>
+            </div>
+            
+            <div class="testimonial">
+                <p class="testimonial-content">
+                    "The AI strategy session was eye-opening. We discovered opportunities we didn't know existed and now have a clear roadmap for implementation."
+                </p>
+                <div class="testimonial-author">Michael Rodriguez</div>
+                <div class="testimonial-role">COO, Growth Labs</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to transform with AI?</h2>
+                <p>Let's discuss how AI can accelerate your business growth</p>
+                <div class="cta-actions">
+                    <a href="/contact.html" class="button button-white">Schedule Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Santiago Sainz AI</h4>
+                    <p>Building the future with AI-powered solutions</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Products</h5>
+                    <a href="/products.html">Templates</a>
+                    <a href="https://santiagosainz.gumroad.com/l/dashpro" target="_blank">DashPro</a>
+                    <a href="/products.html#coming-soon">Coming Soon</a>
+                </div>
+                <div class="footer-section">
+                    <h5>Company</h5>
+                    <a href="/about.html">About</a>
+                    <a href="/consulting.html">Consulting</a>
+                    <a href="/contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h5>Connect</h5>
+                    <a href="mailto:ai@santiagosainz.com">Email</a>
+                    <a href="https://linkedin.com/in/santiagosainz" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/sainzcodes" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Santiago Sainz AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

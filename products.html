@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Premium AI-powered templates by Santiago Sainz. Ship faster with production-ready solutions.">
+    <title>Products - Santiago Sainz AI</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.5'><circle cx='12' cy='12' r='10'/><path d='M12 6v6l4 2'/></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .products-hero {
+            padding-top: calc(var(--nav-height) + var(--space-16));
+            padding-bottom: var(--space-16);
+            text-align: center;
+        }
+        
+        .product-showcase {
+            display: grid;
+            gap: var(--space-32);
+            margin-bottom: var(--space-32);
+        }
+        
+        .product-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-16);
+            align-items: center;
+        }
+        
+        .product-item:nth-child(even) {
+            direction: rtl;
+        }
+        
+        .product-item:nth-child(even) > * {
+            direction: ltr;
+        }
+        
+        .product-visual {
+            position: relative;
+            padding: var(--space-8);
+            background-color: var(--color-surface);
+            border-radius: 16px;
+        }
+        
+        .product-badge {
+            position: absolute;
+            top: var(--space-4);
+            right: var(--space-4);
+            background-color: var(--color-accent);
+            color: white;
+            padding: var(--space-1) var(--space-3);
+            border-radius: 4px;
+            font-size: var(--font-size-xs);
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .product-details h3 {
+            font-size: var(--font-size-3xl);
+            margin-bottom: var(--space-4);
+        }
+        
+        .product-meta {
+            display: flex;
+            gap: var(--space-6);
+            margin-bottom: var(--space-6);
+        }
+        
+        .product-pricing {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+        }
+        
+        .product-features {
+            list-style: none;
+            margin-bottom: var(--space-8);
+        }
+        
+        .product-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-3);
+            margin-bottom: var(--space-3);
+        }
+        
+        .product-features li:before {
+            content: "✓";
+            color: var(--color-accent);
+            font-weight: 600;
+            margin-top: 2px;
+        }
+        
+        .coming-soon {
+            opacity: 0.5;
+            position: relative;
+        }
+        
+        .coming-soon .product-visual {
+            filter: grayscale(1);
+        }
+        
+        @media (max-width: 768px) {
+            .product-item,
+            .product-item:nth-child(even) {
+                grid-template-columns: 1fr;
+                direction: ltr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Santiago Sainz AI</a>
+            <div class="nav-menu">
+                <a href="/products.html" class="nav-link">Products</a>
+                <a href="/consulting.html" class="nav-link">Consulting</a>
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+                <a href="https://santiagosainz.gumroad.com/l/dashpro" class="nav-cta" target="_blank">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="products-hero">
+        <div class="container">
+            <span class="label">Products</span>
+            <h1>Premium Templates</h1>
+            <p class="hero-description">
+                Ship your next project faster with production-ready templates. 
+                Built with modern standards and designed for scale.
+            </p>
+        </div>
+    </section>
+
+    <!-- Products Showcase -->
+    <section class="products">
+        <div class="container">
+            <div class="product-showcase">
+                <!-- DashPro -->
+                <div class="product-item">
+                    <div class="product-visual">
+                        <div class="product-badge">Available Now</div>
+                        <div class="browser-frame">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="browser-content">
+                                <div class="dashboard-preview">
+                                    <div class="sidebar-preview"></div>
+                                    <div class="content-preview">
+                                        <div class="card-preview"></div>
+                                        <div class="card-preview"></div>
+                                        <div class="card-preview"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3>DashPro</h3>
+                        <div class="product-meta">
+                            <div class="product-pricing">$300</div>
+                            <span class="label">Admin Dashboard</span>
+                        </div>
+                        <p>Professional admin dashboard template with everything you need to build modern applications. Includes 20+ components, dark mode, and responsive design.</p>
+                        <ul class="product-features">
+                            <li>20+ pre-built components</li>
+                            <li>Dark mode support</li>
+                            <li>Responsive design system</li>
+                            <li>TypeScript ready</li>
+                            <li>Lifetime updates</li>
+                            <li>Premium support</li>
+                        </ul>
+                        <a href="https://santiagosainz.gumroad.com/l/dashpro" class="button button-primary" target="_blank">
+                            Get DashPro
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SaaSPro -->
+                <div class="product-item coming-soon" id="coming-soon">
+                    <div class="product-visual">
+                        <div class="product-badge">Coming Soon</div>
+                        <div class="browser-frame">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="browser-content">
+                                <div class="dashboard-preview">
+                                    <div class="sidebar-preview"></div>
+                                    <div class="content-preview">
+                                        <div class="card-preview"></div>
+                                        <div class="card-preview"></div>
+                                        <div class="card-preview"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3>SaaSPro</h3>
+                        <div class="product-meta">
+                            <div class="product-pricing">$500</div>
+                            <span class="label">SaaS Starter</span>
+                        </div>
+                        <p>Complete SaaS starter template with authentication, billing, and everything you need to launch your next startup. Built for speed and scale.</p>
+                        <ul class="product-features">
+                            <li>Authentication system</li>
+                            <li>Stripe billing integration</li>
+                            <li>User dashboard</li>
+                            <li>Email templates</li>
+                            <li>API documentation</li>
+                            <li>Deploy anywhere</li>
+                        </ul>
+                        <button class="button button-secondary" disabled>
+                            Notify Me
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AdminPro -->
+                <div class="product-item coming-soon">
+                    <div class="product-visual">
+                        <div class="product-badge">Coming Soon</div>
+                        <div class="browser-frame">
+                            <div class="browser-header">
+                                <div class="browser-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                            </div>
+                            <div class="browser-content">
+                                <div class="dashboard-preview">
+                                    <div class="sidebar-preview"></div>
+                                    <div class="content-preview">
+                                        <div class="card-preview"></div>
+                                        <div class="card-preview"></div>
+                                        <div class="card-preview"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-details">
+                        <h3>AdminPro</h3>
+                        <div class="product-meta">
+                            <div class="product-pricing">$400</div>
+                            <span class="label">Enterprise Admin</span>
+                        </div>
+                        <p>Enterprise-grade admin template with advanced features for complex applications. Includes role management, analytics, and advanced components.</p>
+                        <ul class="product-features">
+                            <li>50+ components</li>
+                            <li>Role-based access control</li>
+                            <li>Advanced analytics</li>
+                            <li>Multi-language support</li>
+                            <li>Enterprise features</li>
+                            <li>Priority support</li>
+                        </ul>
+                        <button class="button button-secondary" disabled>
+                            Notify Me
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to ship faster?</h2>
+                <p>Start building with premium templates today</p>
+                <div class="cta-actions">
+                    <a href="https://santiagosainz.gumroad.com/l/dashpro" class="button button-white" target="_blank">Get DashPro</a>
+                    <a href="/contact.html" class="button button-white-outline">Custom Solutions</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Santiago Sainz AI</h4>
+                    <p>Building the future with AI-powered solutions</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Products</h5>
+                    <a href="/products.html">Templates</a>
+                    <a href="https://santiagosainz.gumroad.com/l/dashpro" target="_blank">DashPro</a>
+                    <a href="/products.html#coming-soon">Coming Soon</a>
+                </div>
+                <div class="footer-section">
+                    <h5>Company</h5>
+                    <a href="/about.html">About</a>
+                    <a href="/consulting.html">Consulting</a>
+                    <a href="/contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h5>Connect</h5>
+                    <a href="mailto:ai@santiagosainz.com">Email</a>
+                    <a href="https://linkedin.com/in/santiagosainz" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/sainzcodes" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Santiago Sainz AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Santiago Sainz - AI Developer and Template Creator building the future of development.">
+    <title>About - Santiago Sainz AI</title>
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.5'><circle cx='12' cy='12' r='10'/><path d='M12 6v6l4 2'/></svg>">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .about-hero {
+            padding-top: calc(var(--nav-height) + var(--space-16));
+            padding-bottom: var(--space-16);
+        }
+        
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: var(--space-16);
+            margin-bottom: var(--space-24);
+        }
+        
+        .about-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-8);
+        }
+        
+        .profile-section {
+            text-align: center;
+        }
+        
+        .profile-avatar {
+            width: 200px;
+            height: 200px;
+            background-color: var(--color-surface);
+            border-radius: 50%;
+            margin: 0 auto var(--space-4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: var(--font-size-6xl);
+            color: var(--color-text-muted);
+        }
+        
+        .profile-name {
+            font-size: var(--font-size-2xl);
+            font-weight: 600;
+            margin-bottom: var(--space-2);
+        }
+        
+        .profile-title {
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-6);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-4);
+        }
+        
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--color-surface);
+            border-radius: 8px;
+            color: var(--color-text-secondary);
+            transition: all 0.2s;
+        }
+        
+        .social-link:hover {
+            background-color: var(--color-primary);
+            color: var(--color-background);
+            transform: translateY(-2px);
+        }
+        
+        .stats-card {
+            background-color: var(--color-surface);
+            padding: var(--space-6);
+            border-radius: 12px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-6);
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: var(--font-size-2xl);
+            font-weight: 700;
+            color: var(--color-accent);
+        }
+        
+        .stat-label {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-muted);
+        }
+        
+        .about-main h2 {
+            margin-bottom: var(--space-6);
+        }
+        
+        .about-section {
+            margin-bottom: var(--space-12);
+        }
+        
+        .about-section h3 {
+            margin-bottom: var(--space-4);
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: var(--space-8);
+        }
+        
+        .timeline:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background-color: var(--color-border);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--space-6);
+        }
+        
+        .timeline-item:before {
+            content: "";
+            position: absolute;
+            left: calc(-1 * var(--space-8) - 1px);
+            top: 8px;
+            width: 12px;
+            height: 12px;
+            background-color: var(--color-accent);
+            border-radius: 50%;
+        }
+        
+        .timeline-year {
+            font-size: var(--font-size-sm);
+            color: var(--color-text-muted);
+            margin-bottom: var(--space-1);
+        }
+        
+        .timeline-title {
+            font-weight: 600;
+            margin-bottom: var(--space-1);
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-6);
+        }
+        
+        .value-card {
+            padding: var(--space-6);
+            background-color: var(--color-surface);
+            border-radius: 8px;
+        }
+        
+        .value-card h4 {
+            margin-bottom: var(--space-2);
+        }
+        
+        @media (max-width: 768px) {
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Santiago Sainz AI</a>
+            <div class="nav-menu">
+                <a href="/products.html" class="nav-link">Products</a>
+                <a href="/consulting.html" class="nav-link">Consulting</a>
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+                <a href="https://santiagosainz.gumroad.com/l/dashpro" class="nav-cta" target="_blank">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <span class="label">About</span>
+            <h1>Building the Future of Development</h1>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section>
+        <div class="container">
+            <div class="about-content">
+                <!-- Sidebar -->
+                <div class="about-sidebar">
+                    <div class="profile-section">
+                        <div class="profile-avatar">SS</div>
+                        <h2 class="profile-name">Santiago Sainz</h2>
+                        <p class="profile-title">AI Developer & Template Creator</p>
+                        <div class="social-links">
+                            <a href="https://linkedin.com/in/santiagosainz" target="_blank" class="social-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </a>
+                            <a href="https://github.com/sainzcodes" target="_blank" class="social-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </a>
+                            <a href="mailto:ai@santiagosainz.com" class="social-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                                    <path d="m22 7-10 5L2 7"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-card">
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">10+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">50+</div>
+                                <div class="stat-label">Projects Shipped</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label">AI-Powered</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">24/7</div>
+                                <div class="stat-label">Support</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="about-main">
+                    <div class="about-section">
+                        <h2>Hi, I'm Santiago</h2>
+                        <p>
+                            I'm a developer and entrepreneur passionate about leveraging AI to build better software faster. 
+                            With over a decade of experience in software development, I've witnessed the transformative power 
+                            of AI in accelerating development workflows and creating superior products.
+                        </p>
+                        <p>
+                            Today, I focus on creating premium templates and providing strategic AI consulting to help teams 
+                            ship faster and build smarter. My mission is to democratize access to professional-grade development 
+                            tools and AI expertise.
+                        </p>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h3>Journey</h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-year">2025</div>
+                                <div class="timeline-title">Santiago Sainz AI</div>
+                                <p>Launched premium templates and AI consulting services</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">2023</div>
+                                <div class="timeline-title">AI Revolution</div>
+                                <p>Embraced AI-powered development with Claude and GPT</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">2020</div>
+                                <div class="timeline-title">Remote First</div>
+                                <p>Transitioned to fully remote work and global collaboration</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">2015</div>
+                                <div class="timeline-title">Full Stack Development</div>
+                                <p>Started building end-to-end solutions for startups</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h3>Values</h3>
+                        <div class="values-grid">
+                            <div class="value-card">
+                                <h4>Quality First</h4>
+                                <p>Every product meets the highest standards of craftsmanship</p>
+                            </div>
+                            <div class="value-card">
+                                <h4>Speed Matters</h4>
+                                <p>Ship fast without compromising on quality</p>
+                            </div>
+                            <div class="value-card">
+                                <h4>AI-Powered</h4>
+                                <p>Leverage AI to 10x productivity and innovation</p>
+                            </div>
+                            <div class="value-card">
+                                <h4>User Focused</h4>
+                                <p>Build solutions that solve real problems</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-section">
+                        <h3>Why Work With Me</h3>
+                        <p>
+                            I bring a unique combination of technical expertise, AI proficiency, and business acumen. 
+                            Whether you're looking for premium templates to accelerate your development or strategic 
+                            consulting to implement AI in your organization, I deliver results that matter.
+                        </p>
+                        <p>
+                            My approach is practical and results-oriented. I don't just provide advice—I help you 
+                            implement solutions that drive real business value. From startups to enterprises, I've 
+                            helped teams across industries leverage AI to build better products faster.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Let's build something amazing together</h2>
+                <p>Ready to accelerate your development with AI?</p>
+                <div class="cta-actions">
+                    <a href="/products.html" class="button button-white">View Templates</a>
+                    <a href="/contact.html" class="button button-white-outline">Get in Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Santiago Sainz AI</h4>
+                    <p>Building the future with AI-powered solutions</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Products</h5>
+                    <a href="/products.html">Templates</a>
+                    <a href="https://santiagosainz.gumroad.com/l/dashpro" target="_blank">DashPro</a>
+                    <a href="/products.html#coming-soon">Coming Soon</a>
+                </div>
+                <div class="footer-section">
+                    <h5>Company</h5>
+                    <a href="/about.html">About</a>
+                    <a href="/consulting.html">Consulting</a>
+                    <a href="/contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h5>Connect</h5>
+                    <a href="mailto:ai@santiagosainz.com">Email</a>
+                    <a href="https://linkedin.com/in/santiagosainz" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/sainzcodes" target="_blank">GitHub</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Santiago Sainz AI. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

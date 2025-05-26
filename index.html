@@ -3,640 +3,204 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Santiago Sainz AI - Premium AI Templates & Strategic Consulting. Building the future with AI-powered solutions.">
-    <meta name="keywords" content="AI Templates, DashPro, AI Consulting, Santiago Sainz, Premium Templates">
-    <meta name="author" content="Santiago Sainz">
-    <meta property="og:title" content="Santiago Sainz AI - Premium AI Solutions">
-    <meta property="og:description" content="Premium templates and strategic AI consulting for ambitious builders.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://santiagosainz.com">
-    <title>Santiago Sainz AI - Premium AI Templates & Consulting</title>
+    <meta name="description" content="Santiago Sainz AI - Advanced AI Templates and Strategic Consulting">
+    <title>Santiago Sainz AI</title>
     
-    <!-- Minimal Favicon -->
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='2'><path d='M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z'/></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.5'><circle cx='12' cy='12' r='10'/><path d='M12 6v6l4 2'/></svg>">
     
-    <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-            --black: #000;
-            --white: #fff;
-            --gray-50: #fafafa;
-            --gray-100: #f5f5f5;
-            --gray-200: #e5e5e5;
-            --gray-300: #d4d4d4;
-            --gray-400: #a3a3a3;
-            --gray-500: #737373;
-            --gray-600: #525252;
-            --gray-700: #404040;
-            --gray-800: #262626;
-            --gray-900: #171717;
-            --blue: #0066FF;
-            --green: #00AA45;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            font-size: 16px;
-            line-height: 1.5;
-            color: var(--black);
-            background: var(--white);
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
-
-        .container {
-            max-width: 1080px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: rgba(255, 255, 255, 0.8);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid var(--gray-200);
-            z-index: 1000;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 64px;
-        }
-
-        .logo {
-            font-size: 18px;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 32px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--gray-600);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
-
-        .nav-links a:hover {
-            color: var(--black);
-        }
-
-        .nav-cta {
-            background: var(--black);
-            color: var(--white);
-            padding: 8px 16px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: opacity 0.2s;
-        }
-
-        .nav-cta:hover {
-            opacity: 0.8;
-        }
-
-        /* Hero */
-        .hero {
-            padding: 180px 0 120px;
-            text-align: center;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--gray-100);
-            color: var(--gray-700);
-            padding: 4px 12px;
-            border-radius: 100px;
-            font-size: 13px;
-            font-weight: 500;
-            margin-bottom: 24px;
-        }
-
-        .hero-badge .dot {
-            width: 8px;
-            height: 8px;
-            background: var(--green);
-            border-radius: 50%;
-        }
-
-        h1 {
-            font-size: 64px;
-            font-weight: 700;
-            letter-spacing: -0.04em;
-            line-height: 1.1;
-            margin-bottom: 24px;
-        }
-
-        .hero-subtitle {
-            font-size: 20px;
-            color: var(--gray-600);
-            max-width: 600px;
-            margin: 0 auto 48px;
-            line-height: 1.6;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 16px;
-            justify-content: center;
-            margin-bottom: 80px;
-        }
-
-        .btn {
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.2s;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .btn-primary {
-            background: var(--black);
-            color: var(--white);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-
-        .btn-secondary {
-            background: var(--white);
-            color: var(--black);
-            border: 1px solid var(--gray-300);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--black);
-        }
-
-        /* Stats */
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 48px;
-            padding: 48px;
-            background: var(--gray-50);
-            border-radius: 16px;
-            margin-bottom: 120px;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 36px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 8px;
-        }
-
-        .stat-label {
-            color: var(--gray-600);
-            font-size: 14px;
-        }
-
-        /* Products */
-        .products {
-            padding: 80px 0;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 80px;
-        }
-
-        .section-label {
-            font-size: 13px;
-            font-weight: 500;
-            color: var(--gray-600);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            margin-bottom: 16px;
-        }
-
-        h2 {
-            font-size: 48px;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            margin-bottom: 16px;
-        }
-
-        .section-subtitle {
-            font-size: 18px;
-            color: var(--gray-600);
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-            gap: 32px;
-            margin-bottom: 120px;
-        }
-
-        .product-card {
-            background: var(--white);
-            border: 1px solid var(--gray-200);
-            border-radius: 12px;
-            padding: 32px;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .product-card:hover {
-            border-color: var(--gray-300);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            transform: translateY(-4px);
-        }
-
-        .product-badge {
-            background: var(--blue);
-            color: var(--white);
-            font-size: 12px;
-            font-weight: 500;
-            padding: 4px 8px;
-            border-radius: 4px;
-            position: absolute;
-            top: 32px;
-            right: 32px;
-        }
-
-        .product-icon {
-            font-size: 32px;
-            margin-bottom: 16px;
-        }
-
-        .product-name {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
-        .product-description {
-            color: var(--gray-600);
-            margin-bottom: 24px;
-            line-height: 1.6;
-        }
-
-        .product-price {
-            font-size: 32px;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 24px;
-        }
-
-        .product-features {
-            list-style: none;
-            margin-bottom: 32px;
-        }
-
-        .product-features li {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 12px;
-            color: var(--gray-700);
-            font-size: 14px;
-        }
-
-        .product-features li:before {
-            content: "✓";
-            color: var(--green);
-            font-weight: 600;
-        }
-
-        /* Services */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 32px;
-            margin-bottom: 120px;
-        }
-
-        .service-card {
-            background: var(--gray-50);
-            border-radius: 12px;
-            padding: 48px;
-            transition: transform 0.3s;
-        }
-
-        .service-card:hover {
-            transform: translateY(-4px);
-        }
-
-        .service-icon {
-            font-size: 32px;
-            margin-bottom: 24px;
-        }
-
-        .service-title {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 16px;
-        }
-
-        .service-description {
-            color: var(--gray-600);
-            line-height: 1.6;
-            margin-bottom: 24px;
-        }
-
-        .service-price {
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--gray-700);
-        }
-
-        /* CTA */
-        .cta {
-            background: var(--black);
-            color: var(--white);
-            padding: 80px 0;
-            text-align: center;
-            border-radius: 24px;
-            margin: 120px 0;
-        }
-
-        .cta h2 {
-            color: var(--white);
-            margin-bottom: 16px;
-        }
-
-        .cta p {
-            font-size: 18px;
-            opacity: 0.8;
-            margin-bottom: 32px;
-        }
-
-        .cta .btn-primary {
-            background: var(--white);
-            color: var(--black);
-        }
-
-        /* Footer */
-        footer {
-            padding: 80px 0 40px;
-            border-top: 1px solid var(--gray-200);
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 32px;
-            list-style: none;
-        }
-
-        .footer-links a {
-            color: var(--gray-600);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s;
-        }
-
-        .footer-links a:hover {
-            color: var(--black);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            color: var(--gray-500);
-            font-size: 14px;
-            padding-top: 40px;
-            border-top: 1px solid var(--gray-200);
-        }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            h1 {
-                font-size: 40px;
-            }
-
-            .hero-subtitle {
-                font-size: 18px;
-            }
-
-            .stats {
-                grid-template-columns: 1fr;
-                gap: 32px;
-            }
-
-            .product-grid,
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .footer-content {
-                flex-direction: column;
-                gap: 32px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav class="container">
-            <div class="logo">Santiago Sainz AI</div>
-            <ul class="nav-links">
-                <li><a href="#products">Products</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <a href="https://santiagosainz.gumroad.com/l/dashpro" class="nav-cta" target="_blank">Get DashPro</a>
-        </nav>
-    </header>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">Santiago Sainz AI</a>
+            <div class="nav-menu">
+                <a href="/products.html" class="nav-link">Products</a>
+                <a href="/consulting.html" class="nav-link">Consulting</a>
+                <a href="/about.html" class="nav-link">About</a>
+                <a href="/contact.html" class="nav-link">Contact</a>
+                <a href="https://santiagosainz.gumroad.com/l/dashpro" class="nav-cta" target="_blank">Get Started</a>
+            </div>
+        </div>
+    </nav>
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <div class="hero-badge">
-                <span class="dot"></span>
-                <span>Available for consulting</span>
-            </div>
-            <h1>Premium AI Templates<br>& Strategic Consulting</h1>
-            <p class="hero-subtitle">
-                Ship faster with production-ready templates. Scale smarter with strategic AI consulting.
-                Built for ambitious founders and enterprises.
-            </p>
-            <div class="hero-buttons">
-                <a href="https://santiagosainz.gumroad.com/l/dashpro" class="btn btn-primary" target="_blank">
-                    Get DashPro →
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    Book Consulting
-                </a>
-            </div>
-            
-            <!-- Stats -->
-            <div class="stats">
-                <div class="stat">
-                    <div class="stat-number">10x</div>
-                    <div class="stat-label">Faster Development</div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Build faster with<br>
+                    <span class="text-gradient">AI-powered templates</span>
+                </h1>
+                <p class="hero-description">
+                    Production-ready templates and strategic consulting to accelerate your development workflow. 
+                    Designed for teams building at scale.
+                </p>
+                <div class="hero-actions">
+                    <a href="/products.html" class="button button-primary">View Templates</a>
+                    <a href="/consulting.html" class="button button-secondary">Explore Consulting</a>
                 </div>
-                <div class="stat">
-                    <div class="stat-number">$300+</div>
-                    <div class="stat-label">Premium Templates</div>
-                </div>
-                <div class="stat">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">AI-Enhanced</div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-value">10x</div>
+                        <div class="stat-label">Faster Development</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">Production Ready</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <div class="stat-value">24/7</div>
+                        <div class="stat-label">Premium Support</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Products -->
-    <section class="products" id="products">
+    <!-- Featured Product -->
+    <section class="featured">
         <div class="container">
-            <div class="section-header">
-                <p class="section-label">Products</p>
-                <h2>Ship Your Next Project Today</h2>
-                <p class="section-subtitle">Premium templates designed for scale and speed</p>
+            <div class="featured-header">
+                <span class="label">Featured Product</span>
+                <h2>DashPro Template</h2>
+                <p>Professional admin dashboard with everything you need to ship today</p>
             </div>
-
-            <div class="product-grid">
-                <div class="product-card">
-                    <span class="product-badge">NEW</span>
-                    <div class="product-icon">📊</div>
-                    <h3 class="product-name">DashPro</h3>
-                    <p class="product-description">
-                        Professional admin dashboard template with dark mode, responsive design, and production-ready components.
-                    </p>
-                    <div class="product-price">$300</div>
-                    <ul class="product-features">
-                        <li>Modern, responsive design</li>
-                        <li>Dark mode included</li>
-                        <li>20+ components</li>
+            <div class="featured-content">
+                <div class="featured-preview">
+                    <div class="browser-frame">
+                        <div class="browser-header">
+                            <div class="browser-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="browser-content">
+                            <div class="dashboard-preview">
+                                <div class="sidebar-preview"></div>
+                                <div class="content-preview">
+                                    <div class="card-preview"></div>
+                                    <div class="card-preview"></div>
+                                    <div class="card-preview"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="featured-info">
+                    <h3>Everything you need</h3>
+                    <ul class="feature-list">
+                        <li>20+ pre-built components</li>
+                        <li>Responsive design system</li>
+                        <li>Dark mode support</li>
+                        <li>TypeScript ready</li>
                         <li>Lifetime updates</li>
-                        <li>Premium support</li>
                     </ul>
-                    <a href="https://santiagosainz.gumroad.com/l/dashpro" class="btn btn-primary" style="width: 100%; justify-content: center;" target="_blank">
-                        Get DashPro →
-                    </a>
-                </div>
-
-                <div class="product-card" style="opacity: 0.6;">
-                    <div class="product-icon">🚀</div>
-                    <h3 class="product-name">SaaSPro</h3>
-                    <p class="product-description">
-                        Complete SaaS starter template with authentication, billing, and everything you need to launch.
-                    </p>
-                    <div class="product-price">Coming Soon</div>
-                    <ul class="product-features">
-                        <li>Authentication system</li>
-                        <li>Stripe integration</li>
-                        <li>User dashboard</li>
-                        <li>Email templates</li>
-                        <li>API ready</li>
-                    </ul>
-                    <button class="btn btn-secondary" style="width: 100%; justify-content: center;" disabled>
-                        Notify Me
-                    </button>
+                    <div class="featured-pricing">
+                        <div class="price">$300</div>
+                        <a href="https://santiagosainz.gumroad.com/l/dashpro" class="button button-primary" target="_blank">
+                            Get DashPro
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services -->
-    <section class="services" id="services">
+    <!-- Services Overview -->
+    <section class="services">
         <div class="container">
             <div class="section-header">
-                <p class="section-label">Services</p>
-                <h2>Scale With Strategic AI</h2>
-                <p class="section-subtitle">Premium consulting for ambitious teams</p>
+                <span class="label">Services</span>
+                <h2>How we can work together</h2>
             </div>
-
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🤖</div>
-                    <h3 class="service-title">AI Strategy Consulting</h3>
-                    <p class="service-description">
-                        Transform your business with strategic AI implementation. From automation to custom models, 
-                        I'll help you leverage AI for 10x growth.
-                    </p>
-                    <p class="service-price">Starting at $500/session</p>
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="3" y="3" width="18" height="18" rx="2"/>
+                            <path d="M9 9h6v6H9z"/>
+                        </svg>
+                    </div>
+                    <h3>Premium Templates</h3>
+                    <p>Production-ready templates designed for modern development workflows. Ship faster with proven patterns.</p>
+                    <a href="/products.html" class="link-arrow">View all templates</a>
                 </div>
-
                 <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3 class="service-title">Custom Development</h3>
-                    <p class="service-description">
-                        Need something unique? I build custom AI-powered solutions tailored to your specific needs. 
-                        Fast, scalable, and built to last.
-                    </p>
-                    <p class="service-price">Project-based pricing</p>
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/>
+                        </svg>
+                    </div>
+                    <h3>AI Consulting</h3>
+                    <p>Strategic guidance to implement AI effectively. From automation to custom models, accelerate your growth.</p>
+                    <a href="/consulting.html" class="link-arrow">Learn more</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                        </svg>
+                    </div>
+                    <h3>Custom Development</h3>
+                    <p>Tailored solutions for unique challenges. We build scalable, maintainable systems that grow with you.</p>
+                    <a href="/contact.html" class="link-arrow">Start a project</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA -->
+    <!-- CTA Section -->
     <section class="cta">
         <div class="container">
-            <h2>Ready to Ship Faster?</h2>
-            <p>Join ambitious founders using premium templates and AI to build the future</p>
-            <a href="https://santiagosainz.gumroad.com/l/dashpro" class="btn btn-primary" target="_blank">
-                Get Started Today →
-            </a>
+            <div class="cta-content">
+                <h2>Ready to accelerate your development?</h2>
+                <p>Join teams building faster with premium templates and AI</p>
+                <div class="cta-actions">
+                    <a href="/products.html" class="button button-white">Browse Templates</a>
+                    <a href="/contact.html" class="button button-white-outline">Get in Touch</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="contact">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="logo">Santiago Sainz AI</div>
-                <ul class="footer-links">
-                    <li><a href="mailto:ai@santiagosainz.com">ai@santiagosainz.com</a></li>
-                    <li><a href="https://linkedin.com/in/santiagosainz" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://twitter.com/sainzcodes" target="_blank">Twitter</a></li>
-                    <li><a href="https://github.com/sainzcodes" target="_blank">GitHub</a></li>
-                </ul>
+                <div class="footer-section">
+                    <h4>Santiago Sainz AI</h4>
+                    <p>Building the future with AI-powered solutions</p>
+                </div>
+                <div class="footer-section">
+                    <h5>Products</h5>
+                    <a href="/products.html">Templates</a>
+                    <a href="https://santiagosainz.gumroad.com/l/dashpro" target="_blank">DashPro</a>
+                    <a href="/products.html#coming-soon">Coming Soon</a>
+                </div>
+                <div class="footer-section">
+                    <h5>Company</h5>
+                    <a href="/about.html">About</a>
+                    <a href="/consulting.html">Consulting</a>
+                    <a href="/contact.html">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h5>Connect</h5>
+                    <a href="mailto:ai@santiagosainz.com">Email</a>
+                    <a href="https://linkedin.com/in/santiagosainz" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/sainzcodes" target="_blank">GitHub</a>
+                </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Santiago Sainz AI. Building the future, one template at a time.</p>
+                <p>&copy; 2025 Santiago Sainz AI. All rights reserved.</p>
             </div>
         </div>
     </footer>
