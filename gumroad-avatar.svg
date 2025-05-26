@@ -1,0 +1,20 @@
+<svg width="400" height="400" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#000000"/>
+  
+  <!-- SS Monogram -->
+  <g transform="translate(200, 200)">
+    <!-- S Letters -->
+    <path d="M -60 -40 Q -60 -60 -40 -60 L -20 -60 Q 0 -60 0 -40 Q 0 -20 -20 -20 L -40 -20 Q -60 -20 -60 0 Q -60 20 -40 20 L -20 20" 
+          fill="none" 
+          stroke="#FFFFFF" 
+          stroke-width="8" 
+          stroke-linecap="round"/>
+    
+    <path d="M 20 -40 Q 20 -60 40 -60 L 60 -60 Q 80 -60 80 -40 Q 80 -20 60 -20 L 40 -20 Q 20 -20 20 0 Q 20 20 40 20 L 60 20" 
+          fill="none" 
+          stroke="#FFFFFF" 
+          stroke-width="8" 
+          stroke-linecap="round"/>
+  </g>
+</svg>

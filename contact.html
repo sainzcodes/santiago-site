@@ -158,6 +158,22 @@
                 box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
             }
         }
+        
+        /* Mobile navigation toggle */
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--color-text);
+        }
+        
+        @media (max-width: 768px) {
+            .nav-toggle {
+                display: block;
+            }
+        }
     </style>
 </head>
 <body>
@@ -165,7 +181,10 @@
     <nav class="nav">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">Santiago Sainz AI</a>
-            <div class="nav-menu">
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+            <div class="nav-menu" id="nav-menu">
                 <a href="products.html" class="nav-link">Products</a>
                 <a href="consulting.html" class="nav-link">Consulting</a>
                 <a href="about.html" class="nav-link">About</a>
@@ -363,5 +382,7 @@
             </div>
         </div>
     </footer>
+    
+    <script src="main.js"></script>
 </body>
 </html>
