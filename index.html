@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Santiago Sainz AI - Professional AI Developer & Template Creator. Building the future with AI-powered development solutions, premium templates, and custom consulting.">
+    <meta name="description" content="Santiago Sainz AI - AI Solutions for Tomorrow's Businesses. Custom AI development, premium templates, and strategic consulting.">
     <meta name="keywords" content="AI Developer, Template Creator, DashPro, AI Consulting, Custom Development, Santiago Sainz">
     <meta name="author" content="Santiago Sainz">
-    <meta property="og:title" content="Santiago Sainz AI - AI Developer & Template Creator">
-    <meta property="og:description" content="Building the future with AI-powered development solutions and premium templates.">
+    <meta property="og:title" content="Santiago Sainz AI - AI Solutions for Tomorrow's Businesses">
+    <meta property="og:description" content="Transform your business with custom AI development, premium templates, and strategic consulting.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://santiagosainz.com">
     <meta property="og:image" content="https://santiagosainz.com/og-image.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Santiago Sainz AI - AI Developer & Template Creator">
-    <meta name="twitter:description" content="Building the future with AI-powered development solutions and premium templates.">
+    <meta name="twitter:title" content="Santiago Sainz AI - AI Solutions for Tomorrow's Businesses">
+    <meta name="twitter:description" content="Transform your business with custom AI development, premium templates, and strategic consulting.">
     <meta name="twitter:image" content="https://santiagosainz.com/og-image.png">
-    <title>Santiago Sainz AI - AI Developer & Template Creator</title>
+    <title>Santiago Sainz AI - AI Solutions for Tomorrow's Businesses</title>
     
     <!-- Modern favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.5'><circle cx='12' cy='12' r='10'/><path d='M12 6v6l4 2'/></svg>">
@@ -32,57 +32,26 @@
         /* Page-specific styles */
         .hero-visual {
             position: relative;
-            margin-top: var(--space-16);
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
+            margin-top: var(--space-8);
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
-        .visual-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: var(--space-6);
-            opacity: 0;
-            animation: fadeInUp 1s ease-out 0.5s forwards;
+        .hero-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 107, 0, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(60px);
+            animation: glow 4s ease-in-out infinite;
         }
         
-        .visual-card {
-            background: var(--color-surface);
-            border-radius: 12px;
-            padding: var(--space-8);
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .visual-card:hover {
-            transform: translateY(-8px);
-        }
-        
-        .visual-icon {
-            font-size: 3rem;
-            margin-bottom: var(--space-4);
-        }
-        
-        .visual-card h3 {
-            font-size: var(--font-size-lg);
-            margin-bottom: var(--space-2);
-        }
-        
-        .visual-card p {
-            font-size: var(--font-size-sm);
-            color: var(--color-text-muted);
-            margin: 0;
-        }
-        
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        @keyframes glow {
+            0%, 100% { transform: scale(1); opacity: 0.8; }
+            50% { transform: scale(1.1); opacity: 1; }
         }
         
         /* Mobile navigation toggle */
@@ -118,8 +87,18 @@
                 transform: translateY(0);
             }
             
-            .visual-grid {
-                grid-template-columns: 1fr;
+            .hero-visual {
+                height: 200px;
+            }
+            
+            .hero-glow {
+                width: 400px;
+                height: 400px;
+            }
+            
+            .cta-info {
+                flex-direction: column;
+                gap: var(--space-4);
             }
         }
         
@@ -134,11 +113,11 @@
                 ☰
             </button>
             <div class="nav-menu" id="nav-menu">
-                <a href="products.html" class="nav-link">Products</a>
-                <a href="consulting.html" class="nav-link">Consulting</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#case-studies" class="nav-link">Case Studies</a>
                 <a href="about.html" class="nav-link">About</a>
                 <a href="contact.html" class="nav-link">Contact</a>
-                <a href="https://santiagosainz.gumroad.com/l/dashpro" class="nav-cta" target="_blank">Get Started</a>
+                <a href="#contact" class="nav-cta">Get Started</a>
             </div>
         </div>
     </nav>
@@ -147,9 +126,9 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Santiago Sainz</h1>
-                <p class="hero-description">AI Developer & Template Creator</p>
-                <p style="font-size: var(--font-size-lg); color: var(--color-text-secondary); margin-bottom: var(--space-8);">Building the future with AI-powered development solutions</p>
+                <span class="hero-badge">Transforming Business with AI</span>
+                <h1>AI Solutions for<br><span class="text-gradient">Tomorrow's Businesses</span></h1>
+                <p class="hero-description">We build intelligent systems that transform how businesses operate. From custom AI development to strategic consulting, we deliver solutions that drive real impact.</p>
                 <div class="hero-actions">
                     <a href="products.html" class="button button-primary">
                         View Templates
@@ -161,39 +140,23 @@
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
-                        <div class="stat-value">10+</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat-divider"></div>
-                    <div class="stat">
                         <div class="stat-value">50+</div>
-                        <div class="stat-label">Projects Shipped</div>
+                        <div class="stat-label">Projects Delivered</div>
                     </div>
                     <div class="stat-divider"></div>
                     <div class="stat">
-                        <div class="stat-value">100%</div>
-                        <div class="stat-label">AI-Powered</div>
+                        <div class="stat-value">30+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <div class="stat-value">95%</div>
+                        <div class="stat-label">Client Satisfaction</div>
                     </div>
                 </div>
             </div>
             <div class="hero-visual">
-                <div class="visual-grid">
-                    <div class="visual-card">
-                        <div class="visual-icon">📊</div>
-                        <h3>Templates</h3>
-                        <p>Premium designs</p>
-                    </div>
-                    <div class="visual-card">
-                        <div class="visual-icon">🤖</div>
-                        <h3>AI First</h3>
-                        <p>Modern approach</p>
-                    </div>
-                    <div class="visual-card">
-                        <div class="visual-icon">⚡</div>
-                        <h3>Fast Delivery</h3>
-                        <p>Ship quickly</p>
-                    </div>
-                </div>
+                <div class="hero-glow"></div>
             </div>
         </div>
     </section>
@@ -245,45 +208,127 @@
     </section>
 
     <!-- Services Section -->
-    <section>
+    <section id="services">
         <div class="container">
             <div class="section-header">
-                <span class="label">Services</span>
-                <h2>How I Can Help</h2>
-                <p class="section-subtitle">Comprehensive solutions for modern businesses</p>
+                <span class="label">Our Services</span>
+                <h2>Comprehensive AI Solutions</h2>
+                <p class="section-subtitle">Designed to transform your business and drive innovation</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>Dashboard Templates</h3>
-                    <p>Premium, production-ready templates that accelerate your development. Built with modern frameworks and best practices.</p>
-                    <a href="products.html" class="link-arrow">View Templates</a>
+                    <div class="service-icon">🧠</div>
+                    <h3>Custom AI Development</h3>
+                    <p>Tailored AI solutions built from the ground up. We create intelligent systems that solve your specific business challenges.</p>
+                    <div class="service-features">
+                        <span>Machine Learning Models</span>
+                        <span>Natural Language Processing</span>
+                        <span>Computer Vision</span>
+                        <span>AI Integration</span>
+                    </div>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🤖</div>
+                    <div class="service-icon">📦</div>
+                    <h3>Premium Templates</h3>
+                    <p>Production-ready AI templates that accelerate your development. Built with best practices and modern architecture.</p>
+                    <div class="service-features">
+                        <span>Next.js + AI Stack</span>
+                        <span>Authentication & Security</span>
+                        <span>Scalable Architecture</span>
+                        <span>Full Documentation</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💡</div>
                     <h3>AI Consulting</h3>
-                    <p>Strategic guidance to implement AI effectively in your organization. From chatbots to automation, unlock new possibilities.</p>
-                    <a href="consulting.html" class="link-arrow">Learn More</a>
+                    <p>Strategic guidance to navigate the AI landscape. We help you identify opportunities and implement winning strategies.</p>
+                    <div class="service-features">
+                        <span>AI Strategy Development</span>
+                        <span>Technical Architecture</span>
+                        <span>Team Training</span>
+                        <span>Implementation Roadmap</span>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3>Custom Development</h3>
-                    <p>Tailored solutions built to your exact specifications. Fast, reliable, and scalable development with AI assistance.</p>
-                    <a href="contact.html" class="link-arrow">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="case-studies">
+        <div class="container">
+            <div class="section-header">
+                <span class="label">Case Studies</span>
+                <h2>Real Results from Real Clients</h2>
+                <p class="section-subtitle">See how we've helped businesses transform with AI</p>
+            </div>
+            
+            <div class="case-study">
+                <div class="case-study-content">
+                    <span class="case-study-label">TechStartup Inc. • SaaS</span>
+                    <h3>AI-Powered Customer Support</h3>
+                    <p>Implemented an intelligent support system that reduced response time by 85% and increased customer satisfaction.</p>
+                    <div class="case-study-metrics">
+                        <div class="metric">
+                            <div class="metric-value">-85%</div>
+                            <div class="metric-label">Response Time</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">+42%</div>
+                            <div class="metric-label">Customer Satisfaction</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">6 weeks</div>
+                            <div class="metric-label">Implementation</div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="link-arrow">Start your project</a>
+                </div>
+                <div class="case-study-visual">
+                    <div class="visual-placeholder">AI Support Dashboard</div>
+                </div>
+            </div>
+
+            <div class="case-study">
+                <div class="case-study-content">
+                    <span class="case-study-label">FinanceFlow • FinTech</span>
+                    <h3>Predictive Analytics Platform</h3>
+                    <p>Built a machine learning system for financial forecasting that improved prediction accuracy by 67%.</p>
+                    <div class="case-study-metrics">
+                        <div class="metric">
+                            <div class="metric-value">+67%</div>
+                            <div class="metric-label">Accuracy</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">10K+</div>
+                            <div class="metric-label">Active Users</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">3 months</div>
+                            <div class="metric-label">Time to Market</div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="link-arrow">Start your project</a>
+                </div>
+                <div class="case-study-visual">
+                    <div class="visual-placeholder">Analytics Platform</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="cta">
+    <section class="cta" id="contact">
         <div class="container">
             <div class="cta-content">
-                <h2>Ready to accelerate your development?</h2>
-                <p>Let's build something amazing together with AI-powered solutions</p>
+                <h2>Let's Build Something<br>Extraordinary Together</h2>
+                <p>Ready to transform your business with AI? Let's discuss your project.</p>
                 <div class="cta-actions">
-                    <a href="contact.html" class="button button-white">Get In Touch</a>
-                    <a href="products.html" class="button button-white-outline">View Templates</a>
+                    <a href="mailto:ai@santiagosainz.com" class="button button-white">Send Message</a>
+                    <a href="https://calendly.com/santiagosainz" class="button button-white-outline" target="_blank">Book a Call</a>
+                </div>
+                <div class="cta-info">
+                    <span>📧 ai@santiagosainz.com</span>
+                    <span>💬 Schedule a 30-minute consultation</span>
                 </div>
             </div>
         </div>
@@ -295,14 +340,14 @@
             <div class="footer-content">
                 <div class="footer-section">
                     <h4>Santiago Sainz AI</h4>
-                    <p>Building the future with AI-powered development solutions</p>
+                    <p>AI Solutions for Tomorrow's Businesses</p>
                     <p style="margin-top: var(--space-4);">ai@santiagosainz.com</p>
                 </div>
                 <div class="footer-section">
-                    <h5>Products</h5>
-                    <a href="products.html">Templates</a>
-                    <a href="https://santiagosainz.gumroad.com/l/dashpro" target="_blank">DashPro</a>
-                    <a href="products.html#coming-soon">Coming Soon</a>
+                    <h5>Services</h5>
+                    <a href="#services">Custom AI Development</a>
+                    <a href="#services">Premium Templates</a>
+                    <a href="#services">AI Consulting</a>
                 </div>
                 <div class="footer-section">
                     <h5>Company</h5>
