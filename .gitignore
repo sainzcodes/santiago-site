@@ -1,0 +1,70 @@
+# Environment variables and secrets
+.env
+.env.local
+.env.production
+.env.*.local
+
+# API tokens and credentials
+*_token.txt
+*_credentials.txt
+*.key
+*.pem
+
+# Cloudflare specific
+cloudflare-token.txt
+cf-token.txt
+zone-id.txt
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs and temporary files
+*.log
+logs/
+temp/
+tmp/
+cache/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+
+# Node.js (if you add any JS tools later)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Backup files
+*.backup
+*.bak
+*-backup.*
+backup/
+
+# Operating System files
+Thumbs.db
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# Sensitive documentation
+*-private.md
+*-secret.md
+credentials/
+secrets/

@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "📦 Preparing files for Cloudflare Pages deployment..."
+echo ""
+echo "Files to upload:"
+echo "- HTML files: $(ls *.html 2>/dev/null | wc -l | tr -d ' ')"
+echo "- CSS files: $(ls *.css 2>/dev/null | wc -l | tr -d ' ')"
+echo "- JS files: $(ls *.js 2>/dev/null | wc -l | tr -d ' ')"
+echo "- Config files: _redirects, _headers"
+echo ""
+echo "Total files: $(ls *.html *.css *.js _redirects _headers 2>/dev/null | wc -l | tr -d ' ')"
+echo ""
+echo "📋 Next steps:"
+echo "1. Go to Cloudflare Pages dashboard"
+echo "2. Click 'Create deployment'"
+echo "3. Choose 'Upload assets'"
+echo "4. Select ALL these files:"
+ls *.html *.css *.js _redirects _headers 2>/dev/null
+echo ""
+echo "Or connect to GitHub for automatic deployments!"
